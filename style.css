@@ -58,6 +58,25 @@ input::placeholder{
     cursor: pointer;
 }
 
+.result {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 14px;
+    font-size: 28px;
+    background-color: #404040;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
     
 
