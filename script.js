@@ -15,6 +15,6 @@ function drawNumber() {
     // Esconder os campos de input e mostrar o resultado
     minInput.classList.add("hidden");
     maxInput.classList.add("hidden");
-    resultDiv.textContent = `Número sorteado: ${result}`;
+    resultDiv.textContent = `${result}`;
     resultDiv.classList.remove("hidden");
 }
