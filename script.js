@@ -4,21 +4,24 @@ function drawNumber() {
     const min = Math.ceil(minInput.value);
     const max = Math.floor(maxInput.value);
     const resultDiv = document.getElementById("result");
+    const errorDiv = document.getElementById("error");
     const buttonNovoSorteio = document.querySelector(".buttonNovoSorteio");
 
     if (!minInput.value || !maxInput.value || isNaN(min) || isNaN(max) || min > max) {
-        alert("Por favor, insira valores válidos, onde o mínimo é menor que o máximo.");
+        errorDiv.textContent = "Por favor, insira valores válidos, onde o mínimo é menor que o máximo.";
+        errorDiv.classList.remove("hidden");
         return;
     }
 
     const result = Math.floor(Math.random() * (max - min + 1)) + min;
-    
+
     // Esconder os campos de input e mostrar o resultado
     minInput.classList.add("hidden");
     maxInput.classList.add("hidden");
     resultDiv.textContent = `${result}`;
     resultDiv.classList.remove("hidden");
     buttonNovoSorteio.classList.remove("hidden");
+    errorDiv.classList.add("hidden");
 }
 
 function resetForm() {
