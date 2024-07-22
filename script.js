@@ -4,8 +4,9 @@ function drawNumber() {
     const min = Math.ceil(minInput.value);
     const max = Math.floor(maxInput.value);
     const resultDiv = document.getElementById("result");
+    const buttonNovoSorteio = document.querySelector(".buttonNovoSorteio");
 
-    if (isNaN(min) || isNaN(max) || min > max) {
+    if (!minInput.value || !maxInput.value || isNaN(min) || isNaN(max) || min > max) {
         alert("Por favor, insira valores válidos, onde o mínimo é menor que o máximo.");
         return;
     }
@@ -17,4 +18,22 @@ function drawNumber() {
     maxInput.classList.add("hidden");
     resultDiv.textContent = `${result}`;
     resultDiv.classList.remove("hidden");
+    buttonNovoSorteio.classList.remove("hidden");
+}
+
+function resetForm() {
+    const minInput = document.querySelector(".numberMin");
+    const maxInput = document.querySelector(".numberMax");
+    const resultDiv = document.getElementById("result");
+    const buttonNovoSorteio = document.querySelector(".buttonNovoSorteio");
+
+    // Limpar os valores dos campos de input
+    minInput.value = '';
+    maxInput.value = '';
+
+    // Mostrar os campos de input e esconder o resultado
+    minInput.classList.remove("hidden");
+    maxInput.classList.remove("hidden");
+    resultDiv.classList.add("hidden");
+    buttonNovoSorteio.classList.add("hidden");
 }

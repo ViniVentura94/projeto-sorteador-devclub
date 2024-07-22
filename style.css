@@ -44,7 +44,7 @@ input::placeholder{
     opacity: 0.8;
 }
 
-.buttonSortear {
+.buttonSortear, .buttonNovoSorteio {
     margin-top: 25px;
     background-color:#AEC346;
     color: aliceblue;
@@ -61,7 +61,7 @@ input::placeholder{
 .result {
     margin-top: 20px;
     width: 150px;
-    height: 80px;
+    height: 60px;
     border-radius: 50px;
     font-size: 42px;
     background-color: #404040;
